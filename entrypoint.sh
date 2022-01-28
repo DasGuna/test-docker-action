@@ -15,4 +15,4 @@ cd release-tools-ros
 # This is the docker ws/src/<package>/release-tools-ros
 ln -s ../ws/src src
 echo "running release script"
-sudo ./release
+./release
