@@ -3,16 +3,12 @@
 echo "Hello Test - input ROS Distro is [$1]"
 time=$(date)
 echo "::set-output name=time::$time"
-echo "check ros installation"
-ls /opt/ros/
-echo "check current directory"
-pwd .
+echo "source ros installation"
+source /opt/ros/$1/setup.bash
 echo "check current directory content"
 ls -la
 echo "current architecture"
 uname -m
-echo "check python version"
-python --version
 echo "clone release tools action from QCR repos"
 git clone https://github.com/qcr/release-tools-ros.git
 cd release-tools-ros
