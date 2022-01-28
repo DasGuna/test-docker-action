@@ -17,14 +17,16 @@ jobs:
   test-action:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    env:      
-      DOCKER_TARGET_PLATFORM: linux/arm/v8  
     name: Testing this action workflow
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Action
         uses: actions/checkout@v2
+      - name: Setup QEMU dependency
+        uses: docker/setup-qemu-action@v1
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v1
       # Use action to test functionality
       - name: Run the action workflow
         uses: ./ # Uses an action in the root directory
