@@ -1,0 +1,16 @@
+# action.yml - metadata file for this action
+name: 'ROS Release Docker Action'
+description: 'Creates ROS release binaries for specified architecture'
+inputs:
+  ros-distro: #id of input
+    description: 'ROS distro for container'
+    required: false
+    default: 'noetic'
+outputs:
+  time: #id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.ros-distro }}
