@@ -29,8 +29,8 @@ jobs:
         uses: docker/setup-buildx-action@v1
       # Use action to test functionality
       - name: Run the action workflow
-        uses: actions/test-docker-action@v0.0.2
         id: test
+        uses: DasGuna/test-docker-action@v0.0.2
         with:
           ros-distro: 'noetic'
       # Use output from action 
