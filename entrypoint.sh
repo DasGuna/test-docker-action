@@ -11,6 +11,8 @@ echo "check current directory content"
 ls -la
 echo "current architecture"
 uname -m
+echo "check python version"
+python --version
 echo "clone release tools action from QCR repos"
 git clone https://github.com/qcr/release-tools-ros.git
 cd release-tools-ros
