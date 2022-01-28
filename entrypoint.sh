@@ -14,4 +14,7 @@ uname -m
 echo "clone release tools action from QCR repos"
 git clone https://github.com/qcr/release-tools-ros.git
 cd release-tools-ros
-ln -s $HOME/catkin_ws/src ../
+# This is the docker ws/src/<package>/release-tools-ros
+ln -s ../../src src
+echo "running release script"
+sudo ./release
