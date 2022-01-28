@@ -15,6 +15,6 @@ echo "clone release tools action from QCR repos"
 git clone https://github.com/qcr/release-tools-ros.git
 cd release-tools-ros
 # This is the docker ws/src/<package>/release-tools-ros
-ln -s ../../src src
+ln -s ../ws/src src
 echo "running release script"
 sudo ./release
