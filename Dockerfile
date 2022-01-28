@@ -1,5 +1,5 @@
 # Bring in ROS (Official) container
-FROM arm32v7/ros:noetic
+FROM amd64/ros:noetic
 
 # Copies your code file from your action repo into the filesystem path '/' of the container
 COPY entrypoint.sh /entrypoint.sh
