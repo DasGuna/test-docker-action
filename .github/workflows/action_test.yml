@@ -23,14 +23,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Action
         uses: actions/checkout@v2
-
       # Use action to test functionality
       - name: Run the action workflow
         uses: ./ # Uses an action in the root directory
         id: test
         with:
           ros-distro: 'noetic'
-        
       # Use output from action 
       - name: Get Action Output
-        run: echo "Action Output was: ${{ steps.test.outputs.time }}"
+        run: echo "${{ steps.test.outputs.time }}"
