@@ -11,3 +11,7 @@ echo "check current directory content"
 ls -la
 echo "current architecture"
 uname -m
+echo "clone release tools action from QCR repos"
+git clone https://github.com/qcr/release-tools-ros.git
+cd release-tools-ros
+ln -s $HOME/catkin_ws/src ../
