@@ -9,3 +9,5 @@ echo "check current directory"
 pwd .
 echo "check current directory content"
 ls -la
+echo "current architecture"
+uname -m
