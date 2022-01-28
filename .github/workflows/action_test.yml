@@ -29,7 +29,7 @@ jobs:
         uses: docker/setup-buildx-action@v1
       # Use action to test functionality
       - name: Run the action workflow
-        uses: ./ # Uses an action in the root directory
+        uses: actions/test-docker-action@v0.0.2
         id: test
         with:
           ros-distro: 'noetic'
