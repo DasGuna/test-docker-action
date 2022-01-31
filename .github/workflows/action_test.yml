@@ -21,7 +21,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout Action
+      - name: Checkout the Action
         uses: actions/checkout@v2
       - name: Setup QEMU dependency
         uses: docker/setup-qemu-action@v1
@@ -30,7 +30,7 @@ jobs:
       # Use action to test functionality
       - name: Run the action workflow
         id: test
-        uses: DasGuna/test-docker-action@v0.0.2
+        uses: DasGuna/test-docker-action@master
         with:
           ros-distro: 'noetic'
       # Use output from action 
