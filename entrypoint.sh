@@ -35,5 +35,22 @@ ls -la
 time=$(date)
 echo "::set-output name=time::$time"
 
-file="$(basename ./*.deb)"
-echo "::set-output name=file::$file"
+# create array of .py files in current directory
+file_arr=(./*.deb)
+echo "Number of debs: ${#file_arr[@]}"
+file_num=${#file_arr[@]}
+counter=1
+for f in "${file_arr[@]}"; do 
+    realpath_file=$(realpath $f)
+    echo "$realpath_file"
+    list+=$realpath_file
+    if [ $counter != $file_num ]
+    then
+        echo "counter is $counter and file num is $file_num"
+        echo "adding comma"
+        list+=','
+    fi
+    ((counter=counter+1))
+done
+echo "list: $list"
+echo "::set-output name=files::$list"
