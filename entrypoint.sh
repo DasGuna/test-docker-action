@@ -2,8 +2,8 @@
 
 apt-get -y update 
 apt-get install -y python3-pip python3-dev python3-bloom python3-stdeb dh-make git wget fakeroot
-# cd /usr/local/bin && ln -s /usr/bin/python3 python && pip3 install --upgrade pip
-# cd ~
+cd /usr/local/bin && ln -s /usr/bin/python3 python && pip3 install --upgrade pip
+cd ~ && ls
 
 echo "Hello Test - input ROS Distro is [$1]"
 time=$(date)

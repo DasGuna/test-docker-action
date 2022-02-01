@@ -9,6 +9,8 @@ inputs:
 outputs:
   time: #id of output
     description: 'The time we greeted you'
+  file: #id of file output
+    description: 'The built debian'
 runs:
   using: 'docker'
   image: 'Dockerfile'
