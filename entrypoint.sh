@@ -53,4 +53,4 @@ for f in "${file_arr[@]}"; do
     ((counter=counter+1))
 done
 echo "list: $list"
-echo "::set-output name=files::$list"
+echo "::set-output name=files::[$list]"
