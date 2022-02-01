@@ -1,7 +1,7 @@
 #!/bin/bash
 
-exec apt-get -y update 
-exec apt-get install -y python3-pip python3-dev python3-bloom python3-stdeb dh-make git wget fakeroot
+apt-get -y update 
+apt-get install -y python3-pip python3-dev python3-bloom python3-stdeb dh-make git wget fakeroot
 # cd /usr/local/bin && ln -s /usr/bin/python3 python && pip3 install --upgrade pip
 # cd ~
 
