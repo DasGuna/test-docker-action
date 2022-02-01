@@ -1,5 +1,5 @@
 # Bring in ROS (Official) container
-FROM arm32v7/ros:noetic
+FROM arm64v8/ros:noetic
 
 # Install Dependencies
 # RUN apt-get -y update 
