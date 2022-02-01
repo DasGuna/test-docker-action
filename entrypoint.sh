@@ -21,6 +21,12 @@ cd release-tools-ros
 ln -s ../ws/src src
 echo "running release script"
 ./release
+echo "COMPLETED RELEASE PIPELINE"
+echo "current path:"
+pwd
+echo "current directory contents"
+ls -la
+
 
 # Set the outputs
 time=$(date)
