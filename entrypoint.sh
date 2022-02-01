@@ -26,8 +26,14 @@ echo "current path:"
 pwd
 echo "current directory contents"
 ls -la
-
+echo "Entering target dir for debians"
+cd target
+echo "Checking contents"
+ls -la 
 
 # Set the outputs
 time=$(date)
 echo "::set-output name=time::$time"
+
+file="$(basename ./*.deb)"
+echo "::set-output name=file::$file"
