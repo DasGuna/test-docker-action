@@ -6,10 +6,6 @@ inputs:
     description: 'ROS distro for container'
     required: false
     default: 'noetic'
-  image: #id of input image
-    description: 'Docker Image to use'
-    required: false
-    default: 'amd64_Dockerfile'
 outputs:
   time: #id of output
     description: 'The time we greeted you'
@@ -17,6 +13,6 @@ outputs:
     description: 'The built debian'
 runs:
   using: 'docker'
-  image: ${{ inputs.image }}
+  image: 'Dockerfile'
   args:
     - ${{ inputs.ros-distro }}
